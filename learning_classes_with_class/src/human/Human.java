@@ -14,5 +14,12 @@ public class Human {
 		Human h1 = new Human(Gender.MALE, new Name("Jakob", "Schwan"));
 		
 	}
+	
+	public Name getName() {
+		return this.name;
+	}
+	public Gender getGender() {
+		return this.gender;
+	}
 
 }
