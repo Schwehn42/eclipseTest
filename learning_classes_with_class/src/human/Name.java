@@ -1,22 +1,22 @@
 package human;
 public class Name {
 	
-	public String name;
-	public String middleName;
-	public String lastName;
-	public String fullName;
+	protected String name;
+	protected String middleName;
+	protected String lastName;
+	protected String fullName;
 	
 	public Name(String name, String middleName, String lastName) {
 		this.name = name;
 		this.middleName = middleName;
 		this.lastName = lastName;
-		this.fullName = name + middleName + lastName;
+		this.fullName = name + " " + middleName + " " + lastName;
 	}
 	
 	public Name(String name, String lastName) {
 		this.name = name;
 		this.lastName = lastName;
-		this.fullName = name + lastName;
+		this.fullName = name + " " + lastName;
 	}
 	
 	/*public String getName() {

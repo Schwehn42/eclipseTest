@@ -4,14 +4,15 @@ import human.Human;
 public class Parents {
 	private Human parent1;
 	private Human parent2;
-	public Parents(Human h1, Human h2) throws Exception {
+	public Parents(Human h1, Human h2) {
+		if (h1.equals(h2)) {
+			System.err.println("Warning: Parents are the same person");
+		}
 		if (h1.getGender() == h2.getGender()) {
-			throw new Exception("Parents need to be of different gender ... still");
+			System.err.println("Warning: Parents are of the same gender");
 		}
-		else {
-			this.parent1 = h1;
-			this.parent2 = h2;
-		}
+		this.parent1 = h1;
+		this.parent2 = h2;
 	}
 	
 	public Human getParent1() {

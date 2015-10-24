@@ -22,7 +22,10 @@ public class Human {
 	}
 	
 	public static void main(String[] args) {
-		Human h1 = new Human(Gender.MALE, new Name("Jakob", "Schwan"));
+		Human h1 = new Human(Gender.MALE, new Name("Jakob", "Bozz", "Schwan"));
+		Human h2 = new Human(Gender.FEMALE, new Name("Taylor", "Swift"));
+		Human h3 = new Human(Gender.MALE, new Name("Barrack", "Obama"), new Parents(h1, h2));
+		System.out.println(h3.getParents().getParent2().getName().fullName);
 		
 	}
 	
@@ -32,5 +35,7 @@ public class Human {
 	public Gender getGender() {
 		return this.gender;
 	}
-
+	public Parents getParents() {
+		return this.parents;
+	}
 }
