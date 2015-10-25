@@ -1,5 +1,7 @@
 package human;
 
+import genes.Properties;
+import genes.Property;
 import relatives.Parents;
 
 public class Human {
@@ -26,6 +28,9 @@ public class Human {
 		Human h2 = new Human(Gender.FEMALE, new Name("Taylor", "Swift"));
 		Human h3 = new Human(Gender.MALE, new Name("Barrack", "Obama"), new Parents(h1, h2));
 		System.out.println(h3.getParents().getParent2().getName().fullName);
+		
+		Property p1 = new Property(Properties.HUMOR, -1.8f);
+		System.out.println(p1.getValue());
 		
 	}
 	
