@@ -27,12 +27,18 @@ public class Human {
 		this.name = name;
 		this.parents = parents;
 		this.hasParents = true;
+		
+		this.propertyList = new PropertyList().mergePropertyLists(this.parents);
 	}
 	
 	public static void main(String[] args) {
 		Human h1 = new Human(Gender.MALE, new Name("Jakob", "Bozz", "Schwan"));
 		Human h2 = new Human(Gender.FEMALE, new Name("Taylor", "Swift"));
 		Human h3 = new Human(Gender.MALE, new Name("Barrack", "Obama"), new Parents(h1, h2));
+		
+		h1.getPropertyList().print();
+		h2.getPropertyList().print();
+		h3.getPropertyList().print();
 	}
 	
 	public Name getName() {
