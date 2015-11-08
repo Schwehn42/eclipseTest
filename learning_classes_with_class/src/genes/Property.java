@@ -6,12 +6,12 @@ public class Property {
 	
 	public Property(Properties prop, int value) {
 		this.prop = prop;
-		this.value = (int) value;
+		this.value = value;
 	}
 	
 	public Property(Properties prop, float value) {
 		this.prop = prop;
-		this.value = (float) value;
+		this.value = value;
 	}
 	
 	public Property(Properties prop, String value) {
@@ -27,7 +27,7 @@ public class Property {
 			return (float) this.value;
 		}
 		else if (this.value instanceof String) {
-			return (String) this.value;
+			return this.value;
 		}
 		else
 			return null;
